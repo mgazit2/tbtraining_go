@@ -25,14 +25,12 @@ func main() {
 			return 
 		}
 	})
-	//define paths
 	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintf(w, "About page")
 		if err != nil {
 			return 
 		}
 	})
-	//define path /time that displays current datetime
 	http.HandleFunc("/time", func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintf(w, "The time is %v", time.Now())
 		if err != nil {
